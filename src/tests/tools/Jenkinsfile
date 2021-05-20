@@ -1,0 +1,15 @@
+@library ('jenkinslearn')
+
+def tools = new org.devops.tools()
+
+pipeline {
+    agent any
+    stages {
+        stage {
+            tools.info('test info');
+            tools.debug('test debug');
+            tools.error('test error')
+        }
+    }
+}
+
